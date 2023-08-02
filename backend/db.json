@@ -1,0 +1,118 @@
+{
+    "cocktails":[
+        {
+            "id":1,
+            "name":"some name",
+            "ingredients":["algo","algo2"],
+            "recepy":"do something and do other thing",
+            "categoryId":1
+        },
+        {
+            "id":2,
+            "name": "Caipiriña",
+            "ingredients": ["Hielo", "Lima", "Azucar", "Cachaca"],
+            "recepy": "macerar lima y azucar, agregar  hielo roto y cachaca (1 medida), luego batir",
+            "categoryId":1
+            
+          },
+          {
+            "id":3,
+            "name": "Mojito",
+            "ingredients": ["Hielo", "Lima", "Azucar", "Ron", "Menta", "Soda"],
+            "recepy": "macerar lima y azucar, agregar menta, hielo roto, ron (1 medida), y terminar con soda",
+            "categoryId":1
+            
+          },
+          {
+            "id":4,
+            "name": "Julepe de Cynar",
+            "ingredients":  ["Hielo", "Lima", "Azucar", "Cynar", "Menta", "Gaseosa Pomelo"],
+            "recepy": "macerar lima y azucar, agregar menta, hielo roto, cynar (1 medida), y terminar con gaseosa pomelo",
+            "categoryId":1
+            
+          },
+          {
+            "id":5,
+            "name": "Baileys Frozzen",
+            "ingredients":  ["3 Bochas de helado", "Licor de Baileys", "Whisky", "Chocolates"],
+            "recepy": "Licuar helado con el Baileys un dash (poco) de Whiskky y chocolates a gusto",
+            "categoryId":1
+            
+          },
+          {
+            "id":6,
+            "name": "Cuba Libre",
+            "ingredients":  ["Hielo", "Limon", "Ron", "Gaseosa Cola"],
+            "recepy": "Agregar a un vaso de trago, hielos, ron (1 medida), una rodaja de limon y terminar con Cola",
+            "categoryId":1
+         
+          },
+          {
+            "id":7,
+            "name": "Margarita",
+            "ingredients":  ["Hielo", "Limon", "Tequila","Triple Sec", "Azucar"],
+            "recepy": "Enfriar copa con hielo, mezclar Tequila (1 medida), Triple Sec (1/2 medida), Jugo de limon, azucar ",
+            "categoryId":1
+         
+          },
+          {
+            "id":8,
+            "name": "Campari Orange",
+            "ingredients":  ["Hielo", "Naranja", "Campari","Jugo de Naranja"],
+            "recepy": "En un vaso de trago, agregar hielos,Campari (1 medida), terminar con jugo de naranja",
+            "categoryId":1
+         
+          },
+          {
+            "id":9,
+            "name": "Daiquiri",
+            "ingredients":  ["Hielo", "Limon", "Ron","Frutillas", "Azucar"],
+            "recepy": "Licuar frutillas, hielo, azucar, Ron (a gusto), y un poco de jugo de limon ",
+            "categoryId":1
+         
+          },
+          {
+            "id":10,
+            "name": "Fernet & Cola",
+            "ingredients":  ["Hielo", "Fernet", "Gaseosa Cola"],
+            "recepy": "En un vaso de trago, agregar hielos, Fernet(1 medida), terminar con gaseosa de cola ",
+            "categoryId":1
+         
+          },
+          {
+            "id":11,
+            "name": "Vodka Orange",
+            "ingredients":  ["Hielo", "Vodka", "Jugo de Naranja"],
+            "recepy": "En un vaso de trago, agregar hielos, Vodka(1 medida), terminar con jugo de naranja ",
+            "categoryId":1
+         
+          },
+          {
+            "id":12,
+            "name": "Tom Collins",
+            "ingredients":  ["Hielo","Lima","Gin","Azucar", "Gaseosa Tonica"],
+            "recepy": "Macerar lima y azucar, agregar hielo roto y Gin(1 y 1/2 medidas), batir y terminar con gaseosa de tonica ",
+            "categoryId":1
+         
+          }
+
+    ],
+    "categories":[
+        {
+            "id":1,
+            "name":"Licuados",
+            "description":"Tragos licuados"
+        },
+        {
+            "id":2,
+            "name":"Batidos",
+            "description":"Tragos Batidos en cocktelera"
+        },
+        {
+            "id":3,
+            "name":"Directos",
+            "description":"Tragos armados directamente en el vaso"
+        }
+
+    ]
+}
