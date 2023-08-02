@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 
 const Cocktail = ({item}) => {
-    console.log(item,"cada item")
-    // console.log(item.cocktail,"item item")
-    // console.log(item.cocktail,"cada item dentro")
+   
     return (
         <>
             <div key={item.id}>
