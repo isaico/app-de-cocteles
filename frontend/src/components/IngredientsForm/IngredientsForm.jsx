@@ -1,17 +1,14 @@
-import { useState } from 'react';
-const IngredientsForm = () => {
-    const [ingr, setingr] = useState([]);
+/* eslint-disable react/prop-types */
 
+
+const IngredientsForm = ({ addIngredient }) => {
+    // const {addIngredient} = useContext(AppContext)
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
         const ingredient = Object.fromEntries(formData);
-        // console.log(ingredient,"transofmado")
-        // console.log(ingr,"State")
-        console.log(ingredient);
-        console.log(ingredient.ingredient);
-        setingr([...ingr, ingredient.ingredient]);
-        console.log(ingr,'estado');
+        const ingredientValue = ingredient.ingredient;
+        addIngredient(ingredientValue);
     };
 
     return (
@@ -19,13 +16,9 @@ const IngredientsForm = () => {
             <label htmlFor="ingredient">Ingrediente</label>
             <input type="text" id="ingredient" name="ingredient" />
             <button type="submit">Agregar</button>
-            <div>
-                {ingr.map((element,i) => (
-                    <h4 key={i}>{element}</h4>
-                ))}
-            </div>
         </form>
     );
 };
+
 
 export default IngredientsForm;
