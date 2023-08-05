@@ -1,12 +1,6 @@
 {
     "cocktails":[
-        {
-            "id":1,
-            "name":"some name",
-            "ingredients":["algo","algo2"],
-            "recepy":"do something and do other thing",
-            "categoryId":1
-        },
+        
         {
             "id":2,
             "name": "Caipiriña",

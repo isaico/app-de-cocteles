@@ -1,12 +1,10 @@
-// import { useQuery } from '@tanstack/react-query';
-// import { getProducts } from '../../api/cocktails.api';
 import Cocktail from './Cocktail';
 
-const CocktailList = (list) => {
-
+const CocktailList = ({ cocktails }) => {
+    // console.log(cocktails,"cocktailsLIST")
     return (
         <div>
-            {list.list.map((cocktail) => (
+            {cocktails?.map((cocktail) => (
                 <Cocktail key={cocktail.id} item={cocktail} />
             ))}
         </div>

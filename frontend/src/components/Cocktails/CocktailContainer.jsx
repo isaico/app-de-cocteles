@@ -1,29 +1,53 @@
 import CocktailList from './CocktailList';
-import { useQuery } from '@tanstack/react-query';
-import { getProducts } from '../../api/cocktails.api';
+import CocktailContext from '../../context/CocktailsContext';
+import { useContext, useEffect, useState } from 'react';
+import filter from '../utils/filter';
+//este componente va a renderizar una lista de cockteles dependiendo,con filtro o sin filtro
 
 const CocktailContainer = () => {
-    
+    const [filterList, setFilterList] = useState([]);
+
     const {
-        isLoading,
-        data: cocktails,
-        isError,
-        error,
-    } = useQuery({
-        queryKey: ['cocktails'],
-        queryFn: getProducts,
-    });
-   
+        cocktails,
+        userIngredients,
+        getCocktails,
+    } = useContext(CocktailContext); //lista de ingredientes y lista cockteles completa
+
+    useEffect(() => {
+        if (userIngredients.length === 0) {
+            getCocktails();
+        } else {
+            handleFilter(cocktails, userIngredients);
+        }
+    }, [userIngredients]);
+
+    const handleFilter = (list, filterParamsList) => {
+        const updatedList = filter(list, filterParamsList);
+        setFilterList(updatedList);
+    };
+
     return (
         <>
-            {' '}
-            {isLoading ? (
-                <div>loading...</div>
-            ) : isError ? (
-                <div>Error: {error.message}</div>
+            {userIngredients.length === 0 ? (
+                <CocktailList cocktails={cocktails} />
+            ) : userIngredients.length > 0 ? (
+                <CocktailList cocktails={filterList} />
             ) : (
-                <CocktailList list={cocktails} />
+                <div>no hay tragos con esos ingreds</div>
             )}
+
+            {/* {userIngredients ? (
+            ) : (
+                <CocktailList cocktails={cocktails} />
+            )} */}
+            {/* {userIngredients.length === 0 ? (
+                <CocktailList cocktails={cocktails} />
+            ) : null}
+            {filteredCocktails ? (
+                <CocktailList cocktails={filteredCocktails} />
+            ) : (
+                <div>No hay tragos con esos ingredientes</div>
+            )} */}
         </>
     );
 };
