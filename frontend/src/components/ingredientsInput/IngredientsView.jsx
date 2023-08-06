@@ -1,5 +1,6 @@
 import CocktailContext from '../../context/CocktailsContext';
 import { useContext } from 'react';
+import {Button} from 'flowbite-react'
 const IngredientsView = () => {
     const { userIngredients, deleteUserIngredient } =
         useContext(CocktailContext); //lista de ingredientes y lista cockteles completa
@@ -9,9 +10,9 @@ const IngredientsView = () => {
             {userIngredients.map((item, i) => (
                 <div key={i}>
                     <h3>{item.ingredientValue}</h3>
-                    <button onClick={() => deleteUserIngredient(item.id)}>
+                    <Button color='success' onClick={() => deleteUserIngredient(item.id)}>
                         X
-                    </button>
+                    </Button>
                 </div>
             ))}
         </div>

@@ -1,7 +1,6 @@
 import Cocktail from './Cocktail';
 
 const CocktailList = ({ cocktails }) => {
-    // console.log(cocktails,"cocktailsLIST")
     return (
         <div>
             {cocktails?.map((cocktail) => (

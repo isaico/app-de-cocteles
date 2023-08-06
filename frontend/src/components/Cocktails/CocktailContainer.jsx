@@ -35,19 +35,6 @@ const CocktailContainer = () => {
             ) : (
                 <div>no hay tragos con esos ingreds</div>
             )}
-
-            {/* {userIngredients ? (
-            ) : (
-                <CocktailList cocktails={cocktails} />
-            )} */}
-            {/* {userIngredients.length === 0 ? (
-                <CocktailList cocktails={cocktails} />
-            ) : null}
-            {filteredCocktails ? (
-                <CocktailList cocktails={filteredCocktails} />
-            ) : (
-                <div>No hay tragos con esos ingredientes</div>
-            )} */}
         </>
     );
 };

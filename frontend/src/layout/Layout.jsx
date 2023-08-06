@@ -7,11 +7,11 @@ import Main from '../components/Main/Main';
 
 const Layout = () => {
     return (
-        <>
-            <Header />
+        <div className='flex flex-col bg-primaryBg'>
+            
             <Main />
             <Footer />
-        </>
+        </div>
     );
 };
 
