@@ -10,7 +10,12 @@ const filter = (list, userInputs) => {
                 cocktail.ingredients.includes(value)
             )
             );
-        return filteredList
+        if(filteredList.length>0){
+           
+            return filteredList
+        }else{
+            return null
+        }
     }
     return null
 };

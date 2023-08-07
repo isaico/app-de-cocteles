@@ -29,7 +29,7 @@ const CocktailState = (props) => {
             const data = res.data;
             dispatch({ type: GET_COCKTAILS, payload: data });
         } catch (error) {
-            console.log(error);
+            alert("Error al cargar los datos: intenta nuevamente!")
         }
     };
     

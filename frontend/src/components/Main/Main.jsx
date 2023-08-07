@@ -10,8 +10,10 @@ const Main = () => {
         <>
             <CocktailState>
                 <Header />
-                <IngredientsView />
-                <CocktailContainer />
+                <div className='flex lg:items-start  lg:flex-row flex-col items-center '>
+                    <IngredientsView />
+                    <CocktailContainer />
+                </div>
             </CocktailState>
         </>
     );
