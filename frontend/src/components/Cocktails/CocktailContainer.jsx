@@ -8,9 +8,9 @@ import ButtonGroup from '../ButtonGroup/ButtonGroup';
 
 const CocktailContainer = () => {
     const [filterList, setFilterList] = useState([]);
-    const [isButtonClicked, setIsButtonClicked] = useState(false);
+    // const [isButtonClicked, setIsButtonClicked] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    const { cocktails, userIngredients, getCocktails } =
+    const { cocktails, userIngredients, getCocktails, isButtonClicked } =
         useContext(CocktailContext); //lista de ingredientes y lista cockteles completa
 
     useEffect(() => {
@@ -32,18 +32,17 @@ const CocktailContainer = () => {
             {isLoading ? (
                 <Loading />
             ) : userIngredients && userIngredients.length === 0 ? (
-                <div className="flex flex-col items-center">
-                    {/* <ButtonGroup setIsButtonClicked={setIsButtonClicked} /> */}
-                   
-                        {isButtonClicked && (
-                            <CocktailList cocktails={cocktails}></CocktailList>
-                        )}
-                    
-                </div>
+                isButtonClicked ? (
+                    <CocktailList cocktails={cocktails} />
+                ) : (
+                    <CocktailList />
+                )
             ) : filterList && userIngredients.length > 0 ? (
                 <CocktailList cocktails={filterList} />
             ) : (
-                <div>no hay tragos con esos ingredientes</div>
+                <span className="text-gray-200 text-md ">
+                    No se encontro un trago con esos ingredientes, prueba otros!
+                </span>
             )}
         </>
     );

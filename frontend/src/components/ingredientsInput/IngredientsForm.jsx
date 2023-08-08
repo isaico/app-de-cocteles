@@ -2,6 +2,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useContext, useRef } from 'react';
 import CocktailsContext from '../../context/CocktailsContext';
+import ButtonGroup from '../ButtonGroup/ButtonGroup';
 const IngredientsForm = () => {
     const { updateUserIngredients } = useContext(CocktailsContext);
     const input = useRef();
@@ -37,7 +38,7 @@ const IngredientsForm = () => {
                     type="text"
                     id="ingredient"
                     name="ingredient"
-                    list='myList'
+                    list="myList"
                     className="block w-full p-4 pl-10 text-sm md:text-lg text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-pink-500 focus:border-pink-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-500 dark:focus:pink-blue-500"
                     placeholder="Ejemplo: Vodka"
                     required
@@ -57,6 +58,7 @@ const IngredientsForm = () => {
                     Agregar
                 </button>
             </div>
+            <ButtonGroup/>
         </form>
     );
 };

@@ -4,7 +4,8 @@ import CocktailsReducer from './CocktailsReducer';
 import {
     GET_COCKTAILS,
     UPDATE_USER_INGREDIENTS,
-    DELETE_USER_INGREDIENT
+    DELETE_USER_INGREDIENT,
+    SHOW_ALL_COCKTAILS,
 } from './types';
 
 import React, { useReducer } from 'react';
@@ -16,7 +17,7 @@ const CocktailState = (props) => {
     const initialState = {
         cocktails: [],
         userIngredients: [],
-        
+        isButtonClicked: false,
     };
 
     //dispatch escucha los cambios, initialState el valor de los datos iniciales
@@ -29,11 +30,10 @@ const CocktailState = (props) => {
             const data = res.data;
             dispatch({ type: GET_COCKTAILS, payload: data });
         } catch (error) {
-            alert("Error al cargar los datos: intenta nuevamente!")
+            alert('Error al cargar los datos: intenta nuevamente!');
         }
     };
-    
-   
+
     const updateUserIngredients = (data) => {
         dispatch({
             type: UPDATE_USER_INGREDIENTS,
@@ -47,14 +47,22 @@ const CocktailState = (props) => {
         });
     };
 
+    const handleIsButtonClicked = (value) => {
+        dispatch({
+            type: SHOW_ALL_COCKTAILS,
+            payload: value,
+        });
+    };
     return (
         <CocktailsContext.Provider
             value={{
                 cocktails: state.cocktails,
                 userIngredients: state.userIngredients,
+                isButtonClicked:state.isButtonClicked,
                 getCocktails,
                 updateUserIngredients,
-                deleteUserIngredient
+                deleteUserIngredient,
+                handleIsButtonClicked,
             }}
         >
             {props.children}

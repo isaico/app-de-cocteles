@@ -7,28 +7,26 @@ const IngredientsView = () => {
 
     return (
         <div
-            className="bg-secondaryBg md:py-8 lg:px-12 px-4 rounded-2xl flex flex-col items-center lg:mr-16 mb-8 p-4 md:mb-8  max-h-72 md:max-h-[34rem] overflow-auto sm:min-w-max w-full"
+            className="bg-secondaryBg  rounded-2xl py-6 flex flex-col  gap-3 lg:gap-6 items-center max-h-72 md:max-h-[34rem] overflow-auto shrink-0 w-full lg:w-1/3 "
             id="toastContainer"
         >
-            <h2 className=" text-xl text-gray-200 pb-2">Ingredientes:</h2>
+            <h2 className=" text-xl text-gray-200 ">Ingredientes:</h2>
             {userIngredients.length === 0 ? (
-                <div className="flex max-w-xs items-center mt-4 text-color-main pb-2 md:pb-0">
+                <div className="flex items-center mx-2 text-color-main pb-2 md:pb-0">
                     <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
+                        baseProfile="tiny"
                         viewBox="0 0 24 24"
+                        fill="currentColor"
                         height="1em"
                         width="1em"
-                        className='mx-2 w-8'
+                        className="mx-2"
                     >
-                        <path d="M22 12 A10 10 0 0 1 12 22 A10 10 0 0 1 2 12 A10 10 0 0 1 22 12 z" />
-                        <path d="M4.9 4.9l14.2 14.2" />
+                        <path d="M12 5.511c.561 0 1.119.354 1.544 1.062l5.912 9.854C20.307 17.842 19.65 19 18 19H6c-1.65 0-2.307-1.159-1.456-2.573l5.912-9.854c.425-.708.983-1.062 1.544-1.062m0-2c-1.296 0-2.482.74-3.259 2.031l-5.912 9.856c-.786 1.309-.872 2.705-.235 3.83S4.473 21 6 21h12c1.527 0 2.77-.646 3.406-1.771s.551-2.521-.235-3.83l-5.912-9.854C14.482 4.251 13.296 3.511 12 3.511z" />
+                        <path d="M13.3 16 A1.3 1.3 0 0 1 12 17.3 A1.3 1.3 0 0 1 10.7 16 A1.3 1.3 0 0 1 13.3 16 z" />
+                        <path d="M13.5 10c0-.83-.671-1.5-1.5-1.5a1.499 1.499 0 00-1.389 2.062C11.165 11.938 12 14 12 14l1.391-3.438c.068-.173.109-.363.109-.562z" />
                     </svg>
-                    <span className="text-gray-200 text-sm ">
-                    Todavía no ingresaste ingredientes
+                    <span className="text-gray-200 text-md">
+                        Todavía no ingresaste ingredientes
                     </span>
                 </div>
             ) : (
@@ -56,7 +54,6 @@ const IngredientsView = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 14 14"
-                               
                             >
                                 <path
                                     stroke="currentColor"

@@ -2,6 +2,7 @@ import {
     GET_COCKTAILS,
     UPDATE_USER_INGREDIENTS,
     DELETE_USER_INGREDIENT,
+    SHOW_ALL_COCKTAILS,
 } from './types';
 //exportamos una funcion anonima que determina que metodo utilizar y que datos utiliza
 export default (state, action) => {
@@ -12,7 +13,7 @@ export default (state, action) => {
                 ...state,
                 cocktails: payload,
             };
-       
+
         case UPDATE_USER_INGREDIENTS:
             const newUserIngredients = [...state.userIngredients, payload];
             return {
@@ -27,6 +28,12 @@ export default (state, action) => {
                 ...state,
                 userIngredients: filteredUserIngredient,
             };
+        case SHOW_ALL_COCKTAILS: {
+            return {
+                ...state,
+                isButtonClicked: payload,
+            };
+        }
         default:
             return state;
     }
