@@ -48,7 +48,7 @@ const IngredientsForm = () => {
                     <option value="Ron">Ron</option>
                     <option value="Azucar">Azucar</option>
                     <option value="Limon">Limon</option>
-                    <option value="Gaseosa de pomelo">Gaseosa de pomelo</option>
+                    <option value="Gaseosa tonica">Gaseosa tonica</option>
                     <option value="Jugo de naranja">Jugo de naranja</option>
                 </datalist>
                 <button

@@ -3,7 +3,7 @@ import { useContext } from 'react';
 
 const IngredientsView = () => {
     const { userIngredients, deleteUserIngredient } =
-        useContext(CocktailContext); //lista de ingredientes y lista cockteles completa
+        useContext(CocktailContext); 
 
     return (
         <div

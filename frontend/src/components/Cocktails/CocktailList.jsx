@@ -3,7 +3,7 @@ import Cocktail from './Cocktail';
 const CocktailList = ({ cocktails }) => {
     return (
         <div
-            className="bg-secondaryBg rounded-xl flex flex-col items-center w-full lg:w-2/3 gap-3 lg:gap-6 pt-6 "
+            className="bg-secondaryBg rounded-xl flex flex-col items-center w-full lg:w-2/3 gap-3 lg:gap-6 pt-6  max-h-[1000px] overflow-auto"
             id="cocktailList"
         >
             <h2 className=" text-xl text-gray-200 ">Cocteles:</h2>

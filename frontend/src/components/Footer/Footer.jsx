@@ -1,4 +1,5 @@
 import Logo from '../Logo/Logo';
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className="bg-primaryBg shadow dark:bg-gray-900 ">
@@ -16,32 +17,37 @@ const Footer = () => {
                     </a>
                     <ul className="flex justify-center  flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                to="/how-to-use"
                                 className="mr-4 hover:underline md:mr-6 "
                             >
-                                About
-                            </a>
+                                Como usar?
+                            </Link>
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="https://www.privacypolicies.com/live/8c3bdc2a-6bb6-4d51-8c26-27a44e039866"
                                 className="mr-4 hover:underline md:mr-6"
                             >
-                                Privacy Policy
+                                Politicas de provacidad
                             </a>
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="mailto:isaico@outlook.com?subject=Quiero%20que%20crees%20mi%20sitio%20web"
+                                target="_blank" 
                                 className="mr-4 hover:underline md:mr-6 "
                             >
-                                Licensing
+                                Quieres que creemos tu sitio?
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">
-                                Contact
+                            <a
+                                href="mailto:isaico@outlook.com?subject=Contacto%20por%20temas%20del%20sitio"
+                                target="_blank"
+                                className="hover:underline"
+                            >
+                                Contactar
                             </a>
                         </li>
                     </ul>

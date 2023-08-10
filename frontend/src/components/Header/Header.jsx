@@ -3,8 +3,7 @@ import IngredientsForm from '../ingredientsInput/IngredientsForm';
 import Logo from '../Logo/Logo';
 
 const Header = () => {
-    //bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]
-    //codigo para cargar un bg con url
+    
     return (
         <>
             <div className="absolute top-4 left-4 invisible md:visible">
